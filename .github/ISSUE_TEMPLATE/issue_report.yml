@@ -1,0 +1,86 @@
+name: Issue Report
+description: File a issue report.
+labels: ["triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report!
+        Please, provide a general summary of the issue in the title above.
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Description of the issue
+      description: A clear and concise description of the issue you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: correlation-id
+    attributes:
+      label: Correlation ID
+      description: Please paste the Correlation ID provided in the error message. E.g. 0f5997126b7744afa24f90c84bb64ac8
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that led to the error. 1) Go to '...', 2) Click on '...', 3) Scroll down to '...', 4) See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots-or-logs
+    attributes:
+      label: Screenshots or console logs
+      description: If applicable, add screenshots and console logs to help explain your problem.
+    validations:
+      required: false
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: Specify your operating system.
+      multiple: true
+      options:
+        - Windows 10
+        - Windows 11
+        - macOS Big Sur
+        - Ubuntu 24.04
+        - Other. Please specify in Additional context section.
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Specify your browser.
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other. Please specify in Additional context section.
+    validations:
+      required: true
+  - type: textarea
+    id: app-version
+    attributes:
+      label: Application version
+      description: Please specify the version of the application you are using.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Include any other relevant information about the problem here.
+    validations:
+      required: false
